@@ -7,7 +7,7 @@
 %define name nucleo
 %define version 0.6
 #%define cvs 20061224
-%define rel 7
+%define rel 8
 %define release %mkrel %{rel}
 %define distname %{name}-%{version}
 
@@ -33,12 +33,14 @@ Patch2: nucleo-0.6-32bit.patch
 Patch3: nucleo-0.6-fixplugins.patch
 # (fc) 0.6-3mdv fix DNS-SD support with avahi
 Patch4: nucleo-0.6-avahi.patch
+# (fc) 0.6-8mdv fix build with latest gcc
+Patch5: nucleo-0.6-fixbuild.patch
 
 License: LGPL
 Group: System/Libraries
 Url: http://www.lri.fr/~roussel/projects/nucleo/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: automake1.9
+BuildRequires: automake
 BuildRequires: mesaglu-devel jpeg-devel png-devel libexif-devel freetype2-devel
 BuildRequires: ffmpeg-devel
 BuildRequires: libxi-devel
@@ -92,10 +94,11 @@ developing programs using the %{name} library.
 %patch2 -p1 -b .32bit
 %patch3 -p1 -b .fixplugins
 %patch4 -p1 -b .avahi
+%patch5 -p1 -b .fixbuild
 
-#needed by patches 1, 3 & 4
-aclocal-1.9
-automake-1.9
+#needed by patches 1, 3, 4, 5
+aclocal
+automake
 
 #needed by patch4
 autoconf
