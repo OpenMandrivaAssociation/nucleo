@@ -39,7 +39,6 @@ Patch5: nucleo-0.6-fixbuild.patch
 License: LGPL
 Group: System/Libraries
 Url: http://www.lri.fr/~roussel/projects/nucleo/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: automake
 BuildRequires: mesaglu-devel jpeg-devel png-devel libexif-devel freetype2-devel
 BuildRequires: ffmpeg-devel
