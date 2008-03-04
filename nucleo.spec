@@ -7,8 +7,6 @@
 %define name nucleo
 %define version 0.6
 #%define cvs 20061224
-%define rel 8
-%define release %mkrel %{rel}
 %define distname %{name}-%{version}
 
 %define common_summary explore video and human-computer interaction
@@ -21,7 +19,7 @@ human-computer interaction techniques.
 Summary: Toolkit to %{common_summary}
 Name: %{name}
 Version: %{version}
-Release: %{release}
+Release: %mkrel 9
 Source0: %{distname}.tar.bz2
 # (gb) 64-bit fixes (API change)
 Patch0: nucleo-20061224-64bit-fixes.patch
