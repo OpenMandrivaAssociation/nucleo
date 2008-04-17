@@ -19,7 +19,7 @@ human-computer interaction techniques.
 Summary: Toolkit to %{common_summary}
 Name: %{name}
 Version: %{version}
-Release: %mkrel 9
+Release: %mkrel 10
 Source0: %{distname}.tar.bz2
 # (gb) 64-bit fixes (API change)
 Patch0: nucleo-20061224-64bit-fixes.patch
@@ -33,6 +33,8 @@ Patch3: nucleo-0.6-fixplugins.patch
 Patch4: nucleo-0.6-avahi.patch
 # (fc) 0.6-8mdv fix build with latest gcc
 Patch5: nucleo-0.6-fixbuild.patch
+# (fc) 0.6-10mdv fix build with latest ffmpeg
+Patch6: nucleo-0.6-ffmpeg.patch
 
 License: LGPL
 Group: System/Libraries
@@ -93,6 +95,7 @@ developing programs using the %{name} library.
 %patch3 -p1 -b .fixplugins
 %patch4 -p1 -b .avahi
 %patch5 -p1 -b .fixbuild
+%patch6 -p1 -b .ffmpeg
 
 #needed by patches 1, 3, 4, 5
 aclocal
