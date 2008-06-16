@@ -36,7 +36,7 @@ BuildRequires: ffmpeg-devel
 BuildRequires: libxi-devel
 BuildRequires: avahi-compat-libdns_sd-devel
 BuildRequires: qt4-devel
-
+Buildrequires: gd-devel
 
 %description
 %{common_description}
