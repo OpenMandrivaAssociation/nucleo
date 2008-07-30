@@ -5,7 +5,7 @@
 # tar cvjf nucleo-$DATE.tar.bz2 nucleo-$DATE
 
 %define name nucleo
-%define version 0.7.2
+%define version 0.7.3
 #define cvs 20061224
 %define distname %{name}-%{version}
 
@@ -21,10 +21,6 @@ Name: %{name}
 Version: %{version}
 Release: %mkrel 1
 Source0: %{distname}.tar.bz2
-# (fc) 0.7.2-1mdv fix missing include
-Patch0: nucleo-0.7.2-string.patch
-# (fc) 0.7.2-1mdv fix build with glibc 2.8
-Patch1: nucleo-0.7.2-create.patch
 
 License: LGPLv2+
 Group: System/Libraries
@@ -86,8 +82,6 @@ developing programs using the %{name} library.
 
 %prep
 %setup -q -n %{distname}
-%patch0 -p1 -b .string
-%patch1 -p1 -b .create
 
 
 %build
