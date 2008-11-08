@@ -19,7 +19,7 @@ human-computer interaction techniques.
 Summary: Toolkit to %{common_summary}
 Name: %{name}
 Version: %{version}
-Release: %mkrel 1
+Release: %mkrel 2
 Source0: %{distname}.tar.bz2
 
 License: LGPLv2+
