@@ -23,7 +23,8 @@ Release: %mkrel 2
 Source0: %{distname}.tar.bz2
 #gw add a header for the internal and deprecated imgconvert function of
 #ffmpeg's libavcocec
-Patch:   nucleo-0.7.3-imgconvert-header.patch
+Patch0:   nucleo-0.7.3-imgconvert-header.patch
+Patch1: nucleo-0.7.3-gcc44.patch
 License: LGPLv2+
 Group: System/Libraries
 Url: http://www.lri.fr/~roussel/projects/nucleo/
@@ -84,7 +85,8 @@ developing programs using the %{name} library.
 
 %prep
 %setup -q -n %{distname}
-%patch -p1
+%patch0 -p1 -b .ffmpeg
+%patch1 -p1 -b .gcc44
 
 %build
 %configure2_5x 
