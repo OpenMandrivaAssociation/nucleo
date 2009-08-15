@@ -19,7 +19,7 @@ human-computer interaction techniques.
 Summary: Toolkit to %{common_summary}
 Name: %{name}
 Version: %{version}
-Release: %mkrel 1
+Release: %mkrel 2
 Source0: http://insitu.lri.fr/metisse/download/nucleo/%{distname}.tar.bz2
 #gw add a header for the internal and deprecated imgconvert function of
 #ffmpeg's libavcocec
