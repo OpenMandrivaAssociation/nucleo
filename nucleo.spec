@@ -5,7 +5,7 @@
 # tar cvjf nucleo-$DATE.tar.bz2 nucleo-$DATE
 
 %define name nucleo
-%define version 0.7.5
+%define version 0.7.6
 #define cvs 20061224
 %define distname %{name}-%{version}
 
@@ -19,12 +19,8 @@ human-computer interaction techniques.
 Summary: Toolkit to %{common_summary}
 Name: %{name}
 Version: %{version}
-Release: %mkrel 2
+Release: %mkrel 1
 Source0: http://insitu.lri.fr/metisse/download/nucleo/%{distname}.tar.bz2
-#gw add a header for the internal and deprecated imgconvert function of
-#ffmpeg's libavcocec
-Patch0:   nucleo-0.7.3-imgconvert-header.patch
-Patch1: nucleo-0.7.3-gcc44.patch
 License: LGPLv2+
 Group: System/Libraries
 Url: http://www.lri.fr/~roussel/projects/nucleo/
@@ -85,8 +81,6 @@ developing programs using the %{name} library.
 
 %prep
 %setup -q -n %{distname}
-%patch0 -p1 -b .ffmpeg
-%patch1 -p1 -b .gcc44
 
 %build
 %configure2_5x 
