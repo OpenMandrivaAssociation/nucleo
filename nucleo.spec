@@ -21,11 +21,13 @@ Name: %{name}
 Version: %{version}
 Release: %mkrel 4
 Source0: http://insitu.lri.fr/metisse/download/nucleo/%{distname}.tar.bz2
+Patch0: nucleo-0.7.6-kernel.patch
 License: LGPLv2+
 Group: System/Libraries
 Url: http://www.lri.fr/~roussel/projects/nucleo/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: automake
+BuildRequires: libv4l-devel
 BuildRequires: mesaglu-devel jpeg-devel png-devel libexif-devel freetype2-devel
 BuildRequires: ffmpeg-devel
 BuildRequires: libxi-devel
@@ -81,6 +83,7 @@ developing programs using the %{name} library.
 
 %prep
 %setup -q -n %{distname}
+%patch0 -p0
 
 %build
 %configure2_5x 
