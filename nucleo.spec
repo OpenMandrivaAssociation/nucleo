@@ -19,7 +19,7 @@ human-computer interaction techniques.
 Summary: Toolkit to %{common_summary}
 Name: %{name}
 Version: %{version}
-Release: %mkrel 5
+Release: %mkrel 6
 Source0: http://insitu.lri.fr/metisse/download/nucleo/%{distname}.tar.bz2
 Patch0: nucleo-0.7.6-kernel.patch
 License: LGPLv2+
