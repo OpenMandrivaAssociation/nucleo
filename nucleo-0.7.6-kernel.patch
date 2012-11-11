@@ -1,0 +1,11 @@
+--- nucleo/image/source/v4lImageSource.H.kernel	2011-05-05 17:43:35.000000000 +0200
++++ nucleo/image/source/v4lImageSource.H	2011-05-05 17:43:51.000000000 +0200
+@@ -19,7 +19,7 @@
+ #include <nucleo/core/URI.H>
+ 
+ #include <linux/types.h>
+-#include <linux/videodev.h>
++#include <libv4l1-videodev.h>
+ 
+ namespace nucleo {
+ 
