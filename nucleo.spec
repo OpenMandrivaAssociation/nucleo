@@ -24,7 +24,7 @@ Source0: http://insitu.lri.fr/metisse/download/nucleo/%{distname}.tar.bz2
 Patch0: nucleo-0.7.6-kernel.patch
 License: LGPLv2+
 Group: System/Libraries
-Url: http://www.lri.fr/~roussel/projects/nucleo/
+Url: https://www.lri.fr/~roussel/projects/nucleo/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: automake
 BuildRequires: libv4l-devel
